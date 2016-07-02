@@ -1,6 +1,6 @@
 import scala.util.Random
 
-trait TexasHoldem extends CardGame {
+trait FiveCardStud extends CardGame {
   val shuffle: (Random, Deck) => Deck = (random, deck) => Deck(random.shuffle(deck.cards))
   val dealCard: Deck => (Deck, Option[Card]) = deck => deck.cards match {
     case x :: xs => (Deck(xs), Some(Card(x.suit, x.rank)))

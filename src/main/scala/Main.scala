@@ -1,6 +1,6 @@
 import scala.util.Random
 
-object Main extends App with TexasHoldem {
+object Main extends App with FiveCardStud {
   val printHand: Hand => Hand = { hand =>
     hand.cards foreach println
     hand
